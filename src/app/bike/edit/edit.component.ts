@@ -21,7 +21,6 @@ export class EditComponent implements OnInit{
     this.bikeID = this._acroute.snapshot.paramMap.get('id') as string
 
     this._bs.getBikeByID(this.bikeID).subscribe(rs=>{
-      console.log(rs)
       this.bikeID = rs.bikes._id
       this.bike.lid = rs.bikes.lenderId
       this.bike.bname = rs.bikes.bikeName

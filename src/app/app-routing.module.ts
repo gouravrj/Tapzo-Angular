@@ -6,14 +6,17 @@ import { RegisterComponent } from './lender/register/register.component';
 import { ListComponent } from './bike/list/list.component';
 import { EditComponent } from './bike/edit/edit.component';
 import { AddComponent } from './bike/add/add.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {path:"",component:HomePageComponent},
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
-  {path:"bike/list",component:ListComponent},
-  {path:"bike/edit/:id",component:EditComponent},
+  {path:"bike/list",component:ListComponent,canActivate:[AuthGuardService]},
+  {path:"bike/edit/:id",component:EditComponent,canActivate:[AuthGuardService]},
   {path:"save",component:AddComponent},
+  {path:"**",component:PagenotfoundComponent}
 ];
 
 @NgModule({

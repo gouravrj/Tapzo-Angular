@@ -16,6 +16,15 @@ import { AddComponent } from './bike/add/add.component';
 import { ListComponent } from './bike/list/list.component';
 import { EditComponent } from './bike/edit/edit.component';
 
+
+import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +34,17 @@ import { EditComponent } from './bike/edit/edit.component';
     RegisterComponent,
     AddComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

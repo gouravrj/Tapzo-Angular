@@ -2,8 +2,8 @@
 <div class="container mt-4">
   <form #regForm="ngForm" (ngSubmit)="onSubmitForm()">
       <div class="card mt-4 shadow">
-          <div class="card-header bg-primary text-white">
-              <h2>Register</h2>
+          <div class="card-header bg-info text-white">
+              <h2>Add Bike</h2>
           </div>
           <div class="card-body">
               <div [class]="isError?'alert alert-danger':'d-none'" class="my-4">{{ message }}</div>
@@ -39,11 +39,11 @@
                     <div class="text-danger">It is Required</div>
                 </div>
               </div> -->
+              <br>
+              Choose Bike Image:- <input type="file" class="form-control" name="image" (change)="selectImage($event)" />
 
-              <input type="file" name="image" (change)="selectImage($event)" />
-              
               <div class="form-group text-end mt-4">
-                  <button class="btn btn-primary" [disabled]="regForm.form.invalid">ADD</button>
+                  <button class="btn btn-info" [disabled]="regForm.form.invalid">ADD</button>
               </div>
           </div>
       </div>
