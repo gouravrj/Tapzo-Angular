@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+
+<h1>{{price}}</h1>
+<h2>{{cid}}</h2>
+<h3>{{bikeid}}</h3>
+
+<!-- Enter no. of Days you want to Book Your Bike: <input type="number" name="" id="" #days> <button (click)="onSubmit(days.value)">Submit</button> -->
+
+Enter no. of Days you want to Book Your Bike
+<select name="day" id="day" (change)="onChange(day.value)" #day>
+  <option value="0.5">0.5</option>
+  <option value="1">1</option>
+  <option value="1.5">1.5</option>
+  <option value="2">2</option>
+  <option value="2.5">2.5</option>
+  <option value="3">3</option>
+  <option value="3.5">3.5</option>
+  <option value="4">4</option>
+  <option value="4.5">4.5</option>
+  <option value="5">5</option>
+</select>
+
+<h1 *ngIf="flag">{{amt}} /- Rupees Only</h1>
+<button *ngIf="flag">Pay Now</button>
+

@@ -13,9 +13,9 @@ export class HomePageComponent implements OnInit{
   public bikeData:any[]=[]
   ngOnInit(): void {
 
-    // localStorage.removeItem('token')
-    // localStorage.removeItem('userName')
-    // localStorage.removeItem('userID')
+    localStorage.removeItem('token')
+    localStorage.removeItem('userName')
+    localStorage.removeItem('userID')
 
     this._bikeservice.listAllBikes().subscribe(rs=>{
       console.log(rs)

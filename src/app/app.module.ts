@@ -21,6 +21,10 @@ import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { UserShowBikesComponent } from './user/user-show-bikes/user-show-bikes.component';
+import { PaymentPageComponent } from './user/payment-page/payment-page.component';
 
 
 
@@ -35,7 +39,11 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     AddComponent,
     ListComponent,
     EditComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
+    UserShowBikesComponent,
+    PaymentPageComponent
   ],
   imports: [
     BrowserModule,

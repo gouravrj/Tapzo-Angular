@@ -12,7 +12,7 @@ export class AuthGuardService implements CanActivate {
   canActivate(){
     // console.log(this.lender.isLoggedIn())
     if(!this.lender.isLoggedIn()){
-      this.router.navigate(['/login'])
+      this.router.navigate(['/'])
       return false
     }
     return true

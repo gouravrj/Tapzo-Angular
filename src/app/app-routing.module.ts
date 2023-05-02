@@ -8,6 +8,10 @@ import { EditComponent } from './bike/edit/edit.component';
 import { AddComponent } from './bike/add/add.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AuthGuardService } from './auth-guard.service';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { UserShowBikesComponent } from './user/user-show-bikes/user-show-bikes.component';
+import { PaymentPageComponent } from './user/payment-page/payment-page.component';
 
 const routes: Routes = [
   {path:"",component:HomePageComponent},
@@ -16,6 +20,10 @@ const routes: Routes = [
   {path:"bike/list",component:ListComponent,canActivate:[AuthGuardService]},
   {path:"bike/edit/:id",component:EditComponent,canActivate:[AuthGuardService]},
   {path:"save",component:AddComponent},
+  {path:"user-login",component:UserLoginComponent},
+  {path:"user-register",component:UserRegisterComponent},
+  {path:"home-user/showbikes",component:UserShowBikesComponent,canActivate:[AuthGuardService]},
+  {path:"bike/book/:price/:bikeid",component:PaymentPageComponent},
   {path:"**",component:PagenotfoundComponent}
 ];
 
