@@ -1,1 +1,15 @@
-<p>lender-history works!</p>
+<app-nav></app-nav>
+<br>
+<div *ngFor="let data of historyData">
+  Bike name:- {{data.bikename}} <br>
+  Bike Booked for {{data.days}} Days <br>
+  Total Cost :- {{data.totalcost}} <br>
+  Date :- {{data.date}} <br>
+  User name:-  {{data.username}} <br>
+  user Phone:- {{data.userphone}}
+
+  <button (click)="onClick(data.bikeID)">Bike Recieved from the User</button>
+  <hr>
+</div>
+
+<h1>In COnsole all The details are There Just Extract Those and show them in this HtmL Page</h1>

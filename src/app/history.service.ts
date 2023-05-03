@@ -21,4 +21,8 @@ export class HistoryService {
     return this._http.get<{message:string,historyData:any}>(this.url+'/byuser/'+localStorage.getItem('userID'))
   }
 
+  returnHistoryByLender(){
+    return this._http.get<{message:string,historyData:any}>(this.url+'/bylender/'+localStorage.getItem('userID'))
+  }
+
 }

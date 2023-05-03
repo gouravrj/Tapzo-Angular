@@ -13,6 +13,7 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserShowBikesComponent } from './user/user-show-bikes/user-show-bikes.component';
 import { PaymentPageComponent } from './user/payment-page/payment-page.component';
 import { UserHistoryComponent } from './history/user-history/user-history.component';
+import { LenderHistoryComponent } from './history/lender-history/lender-history.component';
 
 const routes: Routes = [
   {path:"",component:HomePageComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:"home-user/showbikes",component:UserShowBikesComponent,canActivate:[AuthGuardService]},
   {path:"bike/book/:price/:bikeid/:lid",component:PaymentPageComponent},
   {path:"user-history",component:UserHistoryComponent},
+  {path:"lender-history",component:LenderHistoryComponent},
   {path:"**",component:PagenotfoundComponent}
 ];
 
