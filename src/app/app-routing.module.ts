@@ -12,6 +12,7 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserShowBikesComponent } from './user/user-show-bikes/user-show-bikes.component';
 import { PaymentPageComponent } from './user/payment-page/payment-page.component';
+import { UserHistoryComponent } from './history/user-history/user-history.component';
 
 const routes: Routes = [
   {path:"",component:HomePageComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"user-register",component:UserRegisterComponent},
   {path:"home-user/showbikes",component:UserShowBikesComponent,canActivate:[AuthGuardService]},
   {path:"bike/book/:price/:bikeid/:lid",component:PaymentPageComponent},
+  {path:"user-history",component:UserHistoryComponent},
   {path:"**",component:PagenotfoundComponent}
 ];
 

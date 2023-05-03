@@ -17,4 +17,8 @@ export class HistoryService {
     return this._http.put<{message:string}>(this.url+`/update/${id}`,history)
   }
 
+  returnHistoryByUser(){
+    return this._http.get<{message:string,historyData:any}>(this.url+'/byuser/'+localStorage.getItem('userID'))
+  }
+
 }

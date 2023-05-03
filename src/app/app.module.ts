@@ -25,6 +25,8 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserShowBikesComponent } from './user/user-show-bikes/user-show-bikes.component';
 import { PaymentPageComponent } from './user/payment-page/payment-page.component';
+import { UserHistoryComponent } from './history/user-history/user-history.component';
+import { LenderHistoryComponent } from './history/lender-history/lender-history.component';
 
 
 
@@ -43,7 +45,9 @@ import { PaymentPageComponent } from './user/payment-page/payment-page.component
     UserLoginComponent,
     UserRegisterComponent,
     UserShowBikesComponent,
-    PaymentPageComponent
+    PaymentPageComponent,
+    UserHistoryComponent,
+    LenderHistoryComponent
   ],
   imports: [
     BrowserModule,

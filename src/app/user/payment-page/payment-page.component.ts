@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BikeService } from 'src/app/bike.service';
 import { History } from 'src/app/history';
 import { HistoryService } from 'src/app/history.service';
 
@@ -22,7 +23,7 @@ export class PaymentPageComponent implements OnInit{
 
   public amt!:number
 
-  constructor(private _acroute:ActivatedRoute,private _hs:HistoryService){}
+  constructor(private _acroute:ActivatedRoute,private _hs:HistoryService,private _bs:BikeService){}
 
   ngOnInit(): void {
     this.price = this._acroute.snapshot.paramMap.get('price') as string
@@ -52,6 +53,8 @@ export class PaymentPageComponent implements OnInit{
     this.booked = true;
     this.flag = false;
     this.dropdown = false
+
+    this._bs.decrementAvaibilty(this.bikeid)
   }
 
   onChange(days:any){

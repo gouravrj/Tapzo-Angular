@@ -47,4 +47,12 @@ export class BikeService {
     });
   }
 
+  decrementAvaibilty(id:string){
+    const body="Built By Gourav"
+    this._http.put<{message:string}>(this._url+`/avb/${id}`,body).subscribe(
+      rs=>console.log(rs),
+      err=>console.log(err)
+    )
+  }
+
 }
