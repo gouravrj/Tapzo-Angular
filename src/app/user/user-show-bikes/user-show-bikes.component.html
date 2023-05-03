@@ -24,7 +24,7 @@
         <h6>Price Per Day:- {{bike.priceDay}}   [ Total / Avaibility :-  <i>{{bike.totalbikes}} / {{bike.avaibility}}</i>]</h6>
         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 
-        <a routerLink="/bike/book/{{bike.priceDay}}/{{bike._id}}" class="btn btn-outline-danger">BOOK</a>
+        <a routerLink="/bike/book/{{bike.priceDay}}/{{bike._id}}/{{bike.lenderId._id}}" class="btn btn-outline-danger">BOOK</a>
 
       </div>
 

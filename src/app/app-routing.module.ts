@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:"user-login",component:UserLoginComponent},
   {path:"user-register",component:UserRegisterComponent},
   {path:"home-user/showbikes",component:UserShowBikesComponent,canActivate:[AuthGuardService]},
-  {path:"bike/book/:price/:bikeid",component:PaymentPageComponent},
+  {path:"bike/book/:price/:bikeid/:lid",component:PaymentPageComponent},
   {path:"**",component:PagenotfoundComponent}
 ];
 
