@@ -10,11 +10,13 @@ export class UserShowBikesComponent implements OnInit{
   public bikeData:any[]=[]
   constructor(private _bs:BikeService){}
 
+
   ngOnInit(): void {
     this._bs.listAllBikes().subscribe(response=>{
       this.bikeData = response.bikes
     },err=>{
       console.log(err)
     })
+    
   }
 }

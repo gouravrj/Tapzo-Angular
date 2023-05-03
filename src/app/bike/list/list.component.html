@@ -57,7 +57,7 @@
         <h4 class="card-title">{{bike.bikeName}} <i>({{ bike.lenderId.displayName }})</i></h4>
         <!--Text-->
         <p class="card-text">{{bike.bikeDesc}}</p>
-        <h6>Price Per Day:- {{bike.priceDay}}   [ Total / Avaibility :-  <i>{{bike.totalbikes}} / {{bike.avaibility}}</i>]</h6>
+        <h6 [class]="bike.avaibility?'text-black':'text-danger'">Price Per Day:- {{bike.priceDay}}   [ Total / Avaibility :-  <i>{{bike.totalbikes}} / {{bike.avaibility}}</i>]</h6>
         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 
         <a routerLink="/bike/edit/{{ bike._id }}" class="btn btn-info">Edit</a> &nbsp;&nbsp;
