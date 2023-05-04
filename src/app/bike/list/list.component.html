@@ -54,7 +54,7 @@
       <div class="card-body">
 
         <!--Title-->
-        <h4 class="card-title">{{bike.bikeName}} <i>({{ bike.lenderId.displayName }})</i></h4>
+        <h4 class="card-title">{{bike.bikeName}} </h4>
         <!--Text-->
         <p class="card-text">{{bike.bikeDesc}}</p>
         <h6 [class]="bike.avaibility?'text-black':'text-danger'">Price Per Day:- {{bike.priceDay}}   [ Total / Avaibility :-  <i>{{bike.totalbikes}} / {{bike.avaibility}}</i>]</h6>

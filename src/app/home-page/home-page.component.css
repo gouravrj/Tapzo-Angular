@@ -1,3 +1,7 @@
+*{
+  margin: 0px;
+}
+
 .example-card {
   max-width: 400px;
   margin: auto;
@@ -30,7 +34,10 @@
 }
 
 .sub{
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
+.view{
+  border-bottom: 2px solid black;;
+}

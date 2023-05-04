@@ -19,3 +19,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+.view{
+  border-bottom: 2px solid black;;
+}
