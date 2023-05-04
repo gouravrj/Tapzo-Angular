@@ -8,7 +8,8 @@
   User name:-  {{data.username}} <br>
   user Phone:- {{data.userphone}}
 
-  <button (click)="onClick(data.bikeID)">Bike Recieved from the User</button>
+  {{data.iscompleted}}
+  <button (click)="onClick(data.bikeID,data.historyid)" [class]="data.iscompleted?'d-none':''">Bike Recieved from the User</button>
   <hr>
 </div>
 

@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { BikeService } from 'src/app/bike.service';
+import { HistoryService } from 'src/app/history.service';
 
 @Component({
   selector: 'app-user-show-bikes',
@@ -8,7 +9,10 @@ import { BikeService } from 'src/app/bike.service';
 })
 export class UserShowBikesComponent implements OnInit{
   public bikeData:any[]=[]
-  constructor(private _bs:BikeService){}
+  public historyData:any[]=[]
+  public isabletobook:boolean = true
+
+  constructor(private _bs:BikeService, private _hs:HistoryService){}
 
 
   ngOnInit(): void {
@@ -17,6 +21,14 @@ export class UserShowBikesComponent implements OnInit{
     },err=>{
       console.log(err)
     })
-    
+
+    this._hs.returnHistoryByUser().subscribe(rs=>{
+      this.historyData = rs.historyData
+    },
+      err=>console.log(err)
+    )
+    // console.log(this.historyData[0])
+    // if(this.historyData[this.historyData.length-1].iscompleted==="false")
+    //   this.isabletobook = false
   }
 }

@@ -25,4 +25,12 @@ export class HistoryService {
     return this._http.get<{message:string,historyData:any}>(this.url+'/bylender/'+localStorage.getItem('userID'))
   }
 
+  completedStatusToTrue(id:any){
+    const temp= "Hey Boi"
+    this._http.put<{message:string}>(this.url+`/completed/${id}`,temp).subscribe(
+      rs=>console.log(rs),
+      err=>console.log(err)
+    )
+  }
+
 }

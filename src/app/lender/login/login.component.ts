@@ -28,6 +28,8 @@ export class LoginComponent {
       localStorage.setItem('token',response.token)
       localStorage.setItem('userID',response.user.id)
       localStorage.setItem('userName',response.user.name)
+      localStorage.setItem('type',"lender")
+
       this._router.navigate(['/bike/list'])
     },err=>{
       this.message = err.error.message

@@ -22,7 +22,6 @@ export class UserHistoryComponent implements OnInit{
     },
       err=>console.log(err)
     )
-
   }
 }
 

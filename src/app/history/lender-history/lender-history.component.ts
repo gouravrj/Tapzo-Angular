@@ -21,9 +21,12 @@ export class LenderHistoryComponent implements OnInit{
     },
       err=>console.log(err)
     )
+    
   }
 
-  onClick(id:any){
+  onClick(id:any,history_id:any){
     this._bs.incrementAvaibilty(id)
+    this._hs.completedStatusToTrue(history_id)
+    this.ngOnInit()
   }
 }

@@ -30,6 +30,7 @@ export class UserLoginComponent {
       localStorage.setItem('token',response.token)
       localStorage.setItem('userID',response.user.customer_id)
       localStorage.setItem('userName',response.user.customer_name)
+      localStorage.setItem('type',"customer")
       this._router.navigate(['/home-user/showbikes'])
     },err=>{
       this.message = err.error.message
